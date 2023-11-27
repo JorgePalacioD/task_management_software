@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family:sans-serif;
+}
+
+body{
+    background: #1e172f;
+}
+    /* HEADER */
+.nav{
+    display: flex;
+    justify-content: center;
+    justify-content: flex-start;
+    background-color: #393159;
+    color: white;
+    width: 100vw;
+    height: 4rem;
+}
+
+.nav div{
+    display: flex;
+    align-items: center;
+    width: 41%;
+    padding-left: 2rem;
+}
+
+.open-modal{
+    background-color: #5a4c97;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 1rem;
+    border: none;
+}
+
+.nav h2{
+    width: 50%;
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.modal{
+    height: 15rem;
+    width: 40rem;
+    background-color: white;
+    /* display: none; */
+    border-radius: 1rem;
+    align-items: center;
+    margin: 2rem 0rem 2rem 2rem;
+}
+
+/* .box-modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+} */
+
+#Añadir-tarea{
+    padding: 0.5rem;
+    border-radius: 1rem;
+    background-color: #5a4c97;
+    color: white;
+    border: none;
+    width: 4rem;
+}
+.encabezado{
+    display: flex;
+    align-items:center;
+    font-weight: 600;
+    height: 3rem;
+    background-color: #5a4c97;
+    border-radius: 1rem .8rem 0rem 0rem;
+    color: #fff;
+}
+
+.title-modal{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: 100%;
+    font-size: 1.5rem;
+
+}
+
+.boton{
+    display: flex;
+    justify-content: start;
+    font-size: 2rem;
+    width: 5%;
+    height: 100%;
+}
+
+.cerrar{
+    padding: 2px;
+    border: none;
+    font-size: 1.5rem;
+    background-color: #5a4c97;
+    color: white;
+}
+
+.content-modal{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 11.8rem;
+}
+
+
+    /* MAIN */
+
+.container{
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem;
+    text-align: center;
+    height: 80vh;
+}
+
+.container section{
+    width: 30%;
+    height: auto;
+    background-color: #ffff;
+    border-radius: 2rem;
+}
+
+.container section h4{
+    font-size: 2rem;
+}
+
+    /* FOOTER */
+
+.final{
+    height: 4rem;
+    width: 100%;
+    background-color: #393159;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.final p{
+    padding-left: 2rem;
+}
+
+
