@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tablero Tareas</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <div>
+                <button class="open-modal" data-open="open-modal">CREAR INCIDENCIA</button>
+            </div>
+            <h2>Tablero kanban</h2>
+        </nav>
+
+        <div class="modal" id="modal">
+            <div class="box-modal">
+
+                <section class="header-modal">
+                    <div class="encabezado">
+                        <div class="title-modal">
+                            Escriba su nueva tarea
+                        </div>
+                        <div class="boton">
+                            <button class="cerrar" data-close>X</button>
+                        </div>
+                    </div>
+                </section>
+
+                <section class="content-modal">
+
+                    <div id="modal-vacia" class="alert" style="display: block;">
+                        The input value cannot be empty
+                    </div>
+                    <form action="">
+                        <label for="Por-hacer">Por Hacer:</label>
+                        <input type="text" id="Por-hacer" name="Por-hacer" autofocus />
+                        <button id="Añadir-tarea">Add</button>
+                    </form>
+                </section>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="to-do">
+                <h4>To Do</h4>
+            </section>
+            <section class="Doing">
+                <h4>Doing</h4>
+            </section>
+            <section class="Done">
+                <h4>Done</h4>
+            </section>
+        </div>
+    </main>
+
+    <footer class="final">
+        <p>&copy; todos los derechos reservados</p>
+    </footer>
+</body>
+
+</html>
