@@ -5,64 +5,85 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <title>Tablero Tareas</title>
+    <title>Board Kanban</title>
 </head>
 
 <body>
     <header>
         <nav class="nav">
             <div>
-                <button class="open-modal" data-open="open-modal">CREAR INCIDENCIA</button>
+                <button onclick="openModal()" class="open-modal" >CREATE A NEW TASK</button>
             </div>
-            <h2>Tablero kanban</h2>
+
+            <h2>Board kanban</h2>
+
+            <div class="icons">
+                <button class="btn-login">
+                    Login
+                </button>
+
+                <button class="btn-github">
+                    <img src="/img/github.png">
+                </button>
+
+            </div>
+
         </nav>
 
-        <div class="modal" id="modal">
-            <div class="box-modal">
+            <dialog class="modal" id="modal">
+                <div class="box-modal">
 
-                <section class="header-modal">
-                    <div class="encabezado">
-                        <div class="title-modal">
-                            Escriba su nueva tarea
+                    <section class="header-modal">
+                        <div class="encabezado">
+                            <div class="title-modal">
+                                Create a new task
+                            </div>
+                            <div class="boton">
+                                <button onclick="closeModal()" class="cerrar" >X</button>
+                            </div>
                         </div>
-                        <div class="boton">
-                            <button class="cerrar" data-close>X</button>
+                    </section>
+
+                    <section class="content-modal">
+
+                        <div id="modal-vacia" class="alert" style="display: none;">
+                            The input value cannot be empty
                         </div>
-                    </div>
-                </section>
-
-                <section class="content-modal">
-
-                    <div id="modal-vacia" class="alert" style="display: block;">
-                        The input value cannot be empty
-                    </div>
-                    <form action="">
-                        <label for="Por-hacer">Por Hacer:</label>
-                        <input type="text" id="Por-hacer" name="Por-hacer" autofocus />
-                        <button id="Añadir-tarea">Add</button>
-                    </form>
-                </section>
-            </div>
-        </div>
+                        <form action="">
+                            <div>
+                                <label for="Por-hacer">TO-DO:</label>
+                            </div>
+                            <input type="text" id="Por-hacer" name="Por-hacer" autofocus placeholder="Write here..." />
+                            <button id="Añadir-tarea">ADD</button>
+                        </form>
+                    </section>
+                </div>
+            </dialog>
     </header>
 
     <main>
         <div class="container">
             <section class="to-do">
                 <h4>To Do</h4>
+                <hr>
             </section>
             <section class="Doing">
                 <h4>Doing</h4>
+                <hr>
             </section>
             <section class="Done">
                 <h4>Done</h4>
+                <hr>
             </section>
         </div>
     </main>
 
     <footer class="final">
-        <p>&copy; todos los derechos reservados</p>
+        <p>&copy; All rights reserved </p>
     </footer>
+
+    <script src="/scripts/modal.js"></script>
+
 </body>
 
 </html>
