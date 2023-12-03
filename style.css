@@ -217,7 +217,7 @@ form button{
     justify-content: space-around;
     padding: 2rem;
     text-align: center;
-    height: 80vh;
+    /* height: 80vh;  */
 }
 
 .container section{
@@ -251,43 +251,46 @@ form button{
 /* --------------------------------Card------------------------ */
 
 .card {
-    width: 14rem;
-    height: 13rem;
-    background-color: #ffffff;
+    width: 23rem;
+    height: 7rem;
+    background-color: #c3bdbd;
     margin: 1rem;  
     display: flex;
     flex-direction: column;
     align-items: center;
+    border-radius: 0.5rem;
+    
   
     & .header-card {
-      width: 100%;
-      height: 20%;
-      background-color: #1058d4;
+      width: 23rem;
+      height: 4rem;
+      background-image: linear-gradient( -150deg ,#00DDFF,#0469bd,#9500ff);
       display: flex;
       justify-content: center;
       align-items: center;
+     border-radius: 0.5rem;
     }
   
     & h2 {
-      color: #f7f70c;
+      color: #e7e7d9;
       font-size: 1.5rem;
-      width: 80%;
+      width: 95%;
       font-weight: 900;    
     }
   
     & .close {
-      width: 1.5rem;    
+      width: 2.5rem;    
       height: 1.5rem;
-      border-radius: 5px;
-      background-color: #f84d4d;
-      border: double #ffffff;
-      color: #ffffff;
+      border-radius: 1rem;
+      background-color: #8c7c7c;
+      /* border: double #ffffff; */
+      color: #efefef;
       cursor: pointer;
     }
   
     & .close:hover,
     & .close:focus {
-      background-color: #f60a0a;
+      background-color: #212121;
       font-weight: 900;
     }
   
@@ -298,12 +301,12 @@ form button{
   }
   
   .container-card {
-    width: 85%;
+    width: 21rem;
     padding: 0.5rem;
-    height: 70%;
+    height: 7rem;
     padding: 0.5rem;
     overflow-y: scroll;
-    border-bottom: #3a3e3e 1px solid;
+    border-bottom: #3a3e3e;
   }
   
   a {
