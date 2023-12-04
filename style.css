@@ -249,28 +249,7 @@ form button{
     padding-left: 2rem;
 }
 
-.red-text {
-    color: rgb(95, 14, 170);
-    font-weight: bold;
-  }
 
-  .selection{
-    gap: 1rem;
-  }
-
- 
-  
-  .selectionStyle {
-    font-weight: bold;
-  }
-  
-  #task-category {
- 
-    border: 2px solid #0469bd;
-    border-radius: 0.5rem;
-    background-color: black;
-    color: white;
-  }
 /* --------------------------------Card------------------------ */
 
 .card {
