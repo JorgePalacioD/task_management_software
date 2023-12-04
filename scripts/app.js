@@ -1,10 +1,10 @@
-
 const containerTasks = document.querySelector('#sect-tasks');
 const frmTask = document.getElementById('frm-task');
 const modal = document.getElementById('modal');
 
 const title = document.getElementById('title-task');
 const textTask = document.getElementById('Por-hacer');
+const assignedTo = document.getElementById('assigned-to'); // Nuevo campo
 
 frmTask.addEventListener('submit', createCard);
 
@@ -31,7 +31,12 @@ function createCard(event) {
   const descriptionCard = document.createElement('p');
   descriptionCard.textContent = textTask.value;
 
-  
+  const assignedToLabel = document.createElement('p');
+  assignedToLabel.textContent = 'Tarea asignada a: ';
+
+  const assignedToValue = document.createElement('span');
+  assignedToValue.textContent = assignedTo.value; 
+
   const footerCard = document.createElement('div');
   const reference = document.createElement('a');
   reference.setAttribute('href', 'https://github.com/keycode-team/task_management_software');
@@ -41,7 +46,8 @@ function createCard(event) {
   headerCard.appendChild(closeCard);
 
   containerCard.appendChild(descriptionCard);
-
+  containerCard.appendChild(assignedToLabel);
+  containerCard.appendChild(assignedToValue); 
 
   footerCard.appendChild(reference);
 
