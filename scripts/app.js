@@ -33,9 +33,11 @@ function createCard(event) {
 
   const assignedToLabel = document.createElement('p');
   assignedToLabel.textContent = 'Tarea asignada a: ';
+  assignedToLabel.style.fontWeight = 'bold';
 
   const assignedToValue = document.createElement('span');
   assignedToValue.textContent = assignedTo.value; 
+  assignedToValue.style.color = 'blue';
 
   const footerCard = document.createElement('div');
   const reference = document.createElement('a');
