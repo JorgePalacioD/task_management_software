@@ -1,10 +1,10 @@
-
 const containerTasks = document.querySelector('#sect-tasks');
 const frmTask = document.getElementById('frm-task');
 const modal = document.getElementById('modal');
 
 const title = document.getElementById('title-task');
 const textTask = document.getElementById('Por-hacer');
+const assignedTo = document.getElementById('assigned-to'); // Nuevo campo
 
 frmTask.addEventListener('submit', createCard);
 
@@ -31,33 +31,25 @@ function createCard(event) {
   const descriptionCard = document.createElement('p');
   descriptionCard.textContent = textTask.value;
 
-  const categoryLabel = document.createElement('p');
-  categoryLabel.textContent = 'Tarea asignada a: ';
-  categoryLabel.style.color = 'blue';  
-  categoryLabel.style.fontWeight = 'bold'; 
+  const assignedToLabel = document.createElement('p');
+  assignedToLabel.textContent = 'Tarea asignada a: ';
+  assignedToLabel.style.fontWeight = 'bold';
 
-
-
-  const categorySelect = document.getElementById('task-category');
-  const selectedCategory = categorySelect.options[categorySelect.selectedIndex].text;
-
-  const categoryValue = document.createElement('span');
-  categoryValue.textContent = selectedCategory;
-
-  categoryValue.classList.add('red-text');
-
+  const assignedToValue = document.createElement('span');
+  assignedToValue.textContent = assignedTo.value; 
+  assignedToValue.style.color = 'blue';
 
   const footerCard = document.createElement('div');
   const reference = document.createElement('a');
-  reference.setAttribute('href', '');
+  reference.setAttribute('href', 'https://github.com/keycode-team/task_management_software');
   reference.textContent = 'KeyCode Team';
 
   headerCard.appendChild(titleCard);
   headerCard.appendChild(closeCard);
 
   containerCard.appendChild(descriptionCard);
-  containerCard.appendChild(categoryLabel);
-  containerCard.appendChild(categoryValue);
+  containerCard.appendChild(assignedToLabel);
+  containerCard.appendChild(assignedToValue); 
 
   footerCard.appendChild(reference);
 
