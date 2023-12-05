@@ -5,8 +5,23 @@ const modal = document.getElementById('modal');
 const title = document.getElementById('title-task');
 const textTask = document.getElementById('Por-hacer');
 const assignedTo = document.getElementById('assigned-to'); // Nuevo campo
+const container = document.getElementById('container');
+
+
+// FUNCIONES FLECHA QUE ABREN Y CIERRAN EL MODAL 
+// -------------------------------------------------
+const modalOpen = () => { 
+  modal.showModal();
+}
+
+const modalClose = () => {
+  modal.close();
+}
+// -------------------------------------------------
 
 frmTask.addEventListener('submit', createCard);
+
+// FUNCION PARA MAQUETAR LA TAREA QUE SE CREE
 
 function createCard(event) {
   event.preventDefault();
@@ -37,7 +52,7 @@ function createCard(event) {
 
   const assignedToValue = document.createElement('span');
   assignedToValue.textContent = assignedTo.value; 
-  assignedToValue.style.color = 'blue';
+  assignedToValue.style.color = 'green';
 
   const footerCard = document.createElement('div');
   const reference = document.createElement('a');
@@ -68,9 +83,11 @@ function createCard(event) {
   frmTask.reset();
 }
 
+
 function closeModal() {
   if (modal) {
     modal.close();
+    container.style.height = "auto";
   }
 }
 

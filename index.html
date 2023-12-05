@@ -12,23 +12,25 @@
     <header>
         <nav class="nav">
             <div>
-                <button onclick="openModal()" class="open-modal" >CREATE A NEW TASK</button>
+                <button onclick="modalOpen()" class="open-modal" >CREATE A NEW TASK</button>
             </div>
 
             <h2>Board kanban</h2>
 
             <div class="icons">
                 <button class="btn-login">
-                    Login
+                   <a href="/login.html">Login</a>
                 </button>
 
-                <button class="btn-github"><a href="https://github.com/" target="_blank"><img src="/img/github.png"></a>
-                    
+                <button class="btn-github">
+                    <a href="https://github.com/" target="_blank">
+                        <img src="/img/github.png">
+                    </a>                    
                 </button>
 
             </div>
 
-        </nav>
+        </nav>  
 
             <dialog class="modal" id="modal">
                 <div class="box-modal">
@@ -39,27 +41,29 @@
                                 Create a new task
                             </div>
                             <div class="boton">
-                                <button onclick="closeModal()" class="cerrar" >X</button>
+                                <button onclick="modalClose()" class="cerrar" >X</button>
                             </div>
                         </div>
                     </section>
 
                     <section class="content-modal">
 
-                        <div id="modal-vacia" class="alert" style="display: none;">
+                        <div id="modal-vacia" class="alert">
                             The input value cannot be empty
                         </div>
                         <form id="frm-task" action="">
-
+                            <br>
                             <div>
-                                <label for="Por-hacer">TO-DO:</label>
+                                <input type="text" class="title-task" id="title-task" placeholder="Task title....">
                             </div>
-                            <input type="text" class="title-task" id="title-task" placeholder="Título de la tarea...">
-
-                            <input type="text" id="Por-hacer" name="Por-hacer" autofocus placeholder="Descripcion..." />
+                            
                             <div>
-                                <input type="text" id="assigned-to" name="assigned-to" placeholder="Nombre de la persona asignada...">
-                              </div>
+                                <input type="text" id="assigned-to" name="assigned-to" placeholder="Name of person assigned...">
+                            </div>
+
+                            <div class="div-input-description">
+                                <input type="text" id="Por-hacer" name="Por-hacer" autofocus placeholder="Description..." />
+                            </div>
                             <button id="Añadir-tarea">ADD</button>
                         </form>
                     </section>
@@ -68,7 +72,7 @@
     </header>
 
     <main>
-        <div class="container">
+        <div id="container" class="container">
             <section id="sect-tasks" class="to-do">
                 <h4>To Do</h4>
                 <hr>
@@ -88,8 +92,7 @@
         <p>&copy; All rights reserved </p>
     </footer>
 
-    <script src="scripts/app.js"></script>
-    <script src="/scripts/modal.js"></script>
+    <script src="/app.js"></script>
 
 </body>
 
