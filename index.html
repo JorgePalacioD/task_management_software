@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Board Kanban</title>
+</head>
+
+<body>
+    <header>
+        <nav class="nav">
+            <div>
+                <button onclick="openModal()" class="open-modal" >CREATE A NEW TASK</button>
+            </div>
+
+            <h2>Board kanban</h2>
+
+            <div class="icons">
+            
+                <button class="btn-github"><a href="https://github.com/" target="_blank"><img src="/img/github.png"></a>
+                    
+                </button>
+
+            </div>
+
+        </nav>
+
+            <dialog class="modal" id="modal">
+                <div class="box-modal">
+
+                    <section class="header-modal">
+                        <div class="encabezado">
+                            <div class="title-modal">
+                                Create a new task
+                            </div>
+                            <div class="boton">
+                                <button onclick="closeModal()" class="cerrar" >X</button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="content-modal">
+
+                        <div id="modal-vacia" class="alert" style="display: none;">
+                            The input value cannot be empty
+                        </div>
+                        <form id="frm-task" action="">
+
+                            <div>
+                                <label for="Por-hacer">TO-DO:</label>
+                            </div>
+                            <input type="text" class="title-task" id="title-task" placeholder="Título de la tarea...">
+
+                            <input type="text" id="Por-hacer" name="Por-hacer" autofocus placeholder="Descripcion..." />
+                            <div>
+                                <input type="text" id="assigned-to" name="assigned-to" placeholder="Nombre de la persona asignada...">
+                              </div>
+                            <button id="Añadir-tarea">ADD</button>
+                        </form>
+                    </section>
+                </div>
+            </dialog>
+    </header>
+
+    <main>
+        <div class="container">
+            <section id="sect-tasks" class="to-do dropzone">
+                <h4>To Do</h4>
+                <hr>
+            </section>
+            <section class="Doing dropzone">
+                <h4>Doing</h4>
+                <hr>
+            </section>
+            <section class="Done dropzone">
+                <h4>Done</h4>
+                <hr>
+            </section>
+        </div>
+    </main>
+
+    <footer class="final">
+        <p>&copy; 2023 Task_Management_Software, All rights reserved. </p>
+        <img src="img/kanban.png" alt="" class="footer-img">
+    </footer>
+
+    <script src="scripts/app.js"></script>
+    <script src="/scripts/modal.js"></script>
+
+</body>
+
+</html>
