@@ -60,29 +60,6 @@ button:active{
     gap: 2rem;
 }
 
-.icons .btn-login {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 6rem;
-    height: 2.7rem;
-    padding-bottom: .4rem;
-    border: solid 2px;
-    border-radius: .5rem;
-    font-size: 1.5rem;
-    cursor: pointer;
-    font-weight: 500;
-    background-color: rgba(200, 200, 200, .2);
-    box-shadow: -.5rem .2rem .2rem black;
-    text-shadow: -.5px .5px .1rem black;
-    color: white;
-    transition: .3s;
-}
-
-.icons .btn-login:hover{
-    background-color: rgba(0, 0, 0, .3);
-}
-
 .btn-github{
     padding: 0;
     border: none;
@@ -247,6 +224,14 @@ form button{
 
 .final p{
     padding-left: 2rem;
+}
+
+.footer-img{
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-left: 0.7rem;
+    background-color: #fff;
+    border-radius: 50%
 }
 
 
