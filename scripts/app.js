@@ -15,7 +15,11 @@ function createCard(event) {
   const id = "task" + (getlastindex() + 1);
   saveTodo(title.value, task.value, assignedTo.value);
   renderTodo(title.value, task.value, assignedTo.value, id);
-}
+  
+  
+  }
+
+
 function closeModal() {
   if (modal) {
     modal.close();
@@ -111,9 +115,66 @@ function renderTodo(title, task, assignedTo, id) {
   closeCard.addEventListener("click", () => {
     card.style.display = "none";
     localStorage.removeItem(id);
+
+
   });
 
   closeModal();
 
   frmTask.reset();
+
+
+  const containerDrop = document.querySelectorAll('.dropzone');
+let draggabletodo = null;
+
+document.querySelectorAll('.card').forEach((card) => {
+  card.setAttribute('draggable', 'true');
+  card.addEventListener('dragstart', dragStart);
+  card.addEventListener('dragend', dragEnd);
+});
+
+containerDrop.forEach((status) => {
+  status.addEventListener('dragover', dragOver);
+  status.addEventListener('dragenter', dragEnter);
+  status.addEventListener('dragleave', dragLeave);
+  status.addEventListener('drop', dragDrop);
+});
+
+function dragStart() {
+  draggabletodo = this;
 }
+
+function dragEnd() {
+  draggabletodo = null;
+}
+
+function dragOver(e) {
+  e.preventDefault();
+}
+
+function dragEnter() {
+  this.style.border = '2px dashed #000'; 
+}
+
+function dragLeave() {
+  this.style.border = '';
+}
+
+function dragDrop() {
+  if (this.classList.contains('Doing')) {
+    draggabletodo.style.background = 'green';
+  } else if (this.classList.contains('Done')) {
+    draggabletodo.style.background = 'red';
+  } else {
+    draggabletodo.style.background = '#457b9d';
+  }
+
+  this.style.border = '';
+  this.appendChild(draggabletodo);
+}
+
+}
+  
+  
+  
+
